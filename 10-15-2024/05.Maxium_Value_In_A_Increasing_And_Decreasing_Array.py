@@ -1,15 +1,12 @@
 
 """
 
-<<<<<<< HEAD
 05. Maximum Value in an array of Increasing and Decreasing using Binary Search
 ⮞Video Description: One array of integers is given as an input ,which is initially increasing
 and then decreasing or it can be only increasing or decreasing , you need to find the maximum
 value in the array in O(Log n) Time complexity and O(1) Space Complexity Asked in : Amazon,
 Microsoft, Uber
 
-=======
->>>>>>> 72165569936df7d4c9f20e35b5a3cc6a00fdd935
 In the Question We are given an array, Which is increasing and decreasing or vice versa 
 We have to return a Maximum Value in the Array
 
@@ -41,11 +38,13 @@ def FindMaxiumValue(arr, start, end):
             return arr[end]
     
     mid = start + end // 2
-
+    # left is less and right is less, return mid
     if arr[mid] > arr[mid+1] and arr[mid] > arr[mid-1] :
         return arr[mid]
+    # left is less, right is more then more right
     if arr[mid] > arr[mid-1] and arr[mid] < arr[mid+1]:
         return FindMaxiumValue(arr,mid+1,end)
+    # left is more and right is less, more left
     else:
         return FindMaxiumValue(arr,start,mid-1)
 

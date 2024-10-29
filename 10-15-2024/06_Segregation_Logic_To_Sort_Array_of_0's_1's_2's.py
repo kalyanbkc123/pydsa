@@ -13,7 +13,9 @@ Optimized Approach..
 1. if arr[mid] == 2, swap(arr,mid,high) && high--
 2. if arr[mid] == 0, swap(arr, low, mid) && low++, mid++
 3. if arr[mid] ==1, mid++
-.
+
+Time : O(N)
+Space : O(1)
 
 """
 
